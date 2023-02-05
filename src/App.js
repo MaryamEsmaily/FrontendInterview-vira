@@ -39,7 +39,7 @@ function App() {
         </Box>
       </Box>
 
-      <Box fontSize="sm" mt={4} textAlign="center">
+      <Box fontSize="xs" mt={5} textAlign="center">
         تمامی حقوق محفوظ و مربوط به{" "}
         <Box as="span" fontWeight="bold">
           راشین ویرا

@@ -6,7 +6,7 @@ import UserIcon from "components/icon/UserIcon";
 
 const MenuBar = [
   {
-    key: "1",
+    key: "category",
     icon: MenuIcon,
     name: "دسته بندی",
     path: "#",
