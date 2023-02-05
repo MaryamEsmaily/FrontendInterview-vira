@@ -13,18 +13,11 @@ const Main = chakra("main", {
   baseStyle: ({ open, theme }) => {
     const { easing, duration } = theme.transition;
     return {
+      // mt: `${appLayoutConfig.NavbarHeight}px`,
+      height: `calc(100vh - ${appLayoutConfig.NavbarHeight}px)`,
       transition: [easing["ease-in-out"], duration["fast"]].join(" "),
-      w: `calc(100% - ${
-        (open
-          ? appLayoutConfig.PrimarySideOpenWidth
-          : appLayoutConfig.PrimarySideCloseWidth) + 50
-      }px)`,
       overflow: "hidden",
-      ml: `${
-        open
-          ? appLayoutConfig.PrimarySideOpenWidth
-          : appLayoutConfig.PrimarySideCloseWidth
-      }px`,
+      mx: `20px`,
     };
   },
 });

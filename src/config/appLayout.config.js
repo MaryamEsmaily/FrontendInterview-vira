@@ -1,6 +1,5 @@
 const appLayoutConfig = {
-  PrimarySideOpenWidth: 212,
-  PrimarySideCloseWidth: 100,
+  NavbarHeight: 85,
 };
 
 export default appLayoutConfig;

@@ -1,31 +1,37 @@
+import { Search2Icon } from "@chakra-ui/icons";
+import HomeIcon from "components/icon/HomeIcon";
+import LocationFillIcon from "components/icon/LocationFillIcon";
+import MenuIcon from "components/icon/MenuIcon";
+import UserIcon from "components/icon/UserIcon";
+
 const MenuBar = [
   {
     key: "1",
-    icon: "",
+    icon: MenuIcon,
     name: "دسته بندی",
     path: "#",
   },
   {
     key: "2",
-    icon: "",
+    icon: UserIcon,
     name: "حساب کاربری",
     path: "#",
   },
   {
     key: "3",
-    icon: "",
+    icon: Search2Icon,
     name: "جستجو",
     path: "#",
   },
   {
     key: "4",
-    icon: "",
+    icon: LocationFillIcon,
     name: "انتخاب شهر",
     path: "#",
   },
   {
     key: "5",
-    icon: "",
+    icon: HomeIcon,
     name: "خانه",
     path: "#",
   },

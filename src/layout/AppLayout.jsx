@@ -4,13 +4,16 @@ import React from "react";
 import AppLayoutProvider from "provider/AppLayoutProvider";
 import AppLayoutMain from "container/layout/AppLayout/AppLayoutMain";
 import AppLayoutNavbar from "container/layout/AppLayout/AppLayoutNavbar";
+import useBreakpoint from "hook/useBreakpoint";
 
 function AppLayout({ children }) {
   //
+  const { base, lg } = useBreakpoint();
   return (
     <AppLayoutProvider>
-      <AppLayoutNavbar />
+      {lg && <AppLayoutNavbar />}
       <AppLayoutMain>{children}</AppLayoutMain>
+      {base && !lg && <AppLayoutNavbar />}
     </AppLayoutProvider>
   );
 }

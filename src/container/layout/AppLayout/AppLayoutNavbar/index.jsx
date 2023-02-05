@@ -4,19 +4,26 @@ import React from "react";
 
 function AppLayoutNavbar() {
   return (
-    <Box py={5} px={8} boxShadow="sm">
+    <Box py={5} px={8} bg="gray.100" boxShadow="sm">
       <Stack
         direction="row"
         justifyContent={{ base: "space-around", lg: "start" }}
-        align="center"
+        align="start"
         spacing={5}
       >
-        {MenuBar.map((menuItem) => (
-          <Stack direction={{ base: "column", lg: "row" }} key={menuItem.key}>
-            <Box>Icon</Box>
-            <Box>{menuItem.name}</Box>
-          </Stack>
-        ))}
+        {MenuBar?.map((menuItem) => {
+          const Icon = menuItem.icon;
+          return (
+            <Stack
+              direction={{ base: "column", lg: "row" }}
+              align="center"
+              key={menuItem.key}
+            >
+              {Icon && <Icon boxSize={4} />}
+              <Box fontSize="sm">{menuItem.name}</Box>
+            </Stack>
+          );
+        })}
       </Stack>
     </Box>
   );
